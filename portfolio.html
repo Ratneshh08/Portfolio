@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratnesh | Web Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oBWwV7Jz2g+tAQdUQg6us2NwG0e5FE4pUJtyEBtHOG3LpyY2Z3rT9sEr58bWW4lBv6KJmkgAx/f17y7z3y91lQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    window.onload = function() {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    body.dark .container {
+      background: #1e1e1e;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+    .hero h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: #003366;
+    }
+    body.dark .hero h1,
+    body.dark .section h2 {
+      color: #80cbc4;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .project-card {
+      background: #eef2f7;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    body.dark .project-card {
+      background: #2a2a2a;
+    }
+    .contact, .resume {
+      text-align: center;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #003366;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .dark-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: #003366;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 5px;
+    }
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .social-links a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .social-links a i {
+      font-size: 1.2rem;
+    }
+    body.dark .social-links a {
+      color: #80cbc4;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <div class="container">
+    <div class="hero">
+      <img src="ratnesh.jpg" alt="Ratnesh">
+      <h1>Hello, I’m Ratnesh, <br><strong>Web Developer</strong></h1>
+      <p>Crafting modern websites with clean code & strong design.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ratnesh-kumar-a937432a5" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+        <a href="https://github.com/Ratneshh08" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+      </div>
+    </div>
+
+    <div class="section about">
+      <h2>About Me</h2>
+      <p>I’m a Frontend web developer passionate about building user-friendly websites and web apps using modern technologies like Bootstrap and Tailwind CSS.</p>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>HTML</h3>
+        </div>
+        <div class="project-card">
+          <h3>CSS</h3>
+        </div>
+        <div class="project-card">
+          <h3>JavaScript</h3>
+        </div>
+        <div class="project-card">
+          <h3>Bootstrap</h3>
+        </div>
+        <div class="project-card">
+          <h3>Tailwind CSS</h3>
+        </div>
+        <div class="project-card">
+          <h3>DSA with Java</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>My Work</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A clean, responsive personal portfolio.</p>
+        </div>
+        <div class="project-card">
+          <h3>Spotify Clone</h3>
+          <p>A music player with a rich music library using HTML and CSS.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ratneshkumar252005@gmail.com">ratneshkumar252005@gmail.com</a></p>
+      <a class="button" href="#">Hire Me</a>
+    </div>
+
+    <div class="section resume">
+      <h2>Résumé</h2>
+      <a class="button" href="Resume 1.pdf" download>Download Resume</a>
+    </div>
+
+    <footer>
+      © 2025 Ratnesh. Made with ❤️ using HTML & CSS.
+    </footer>
+  </div>
+</body>
+</html>
